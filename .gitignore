@@ -1,0 +1,12 @@
+*.project
+*/.settings/**
+*.classpath
+**/target/**
+*.MF
+*.iml
+*/build/**
+*.mymetadata
+*/.externalToolBuilders/**
+*.idea/**
+*.jar
+*.class
