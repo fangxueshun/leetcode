@@ -1,4 +1,4 @@
-package com.fang.leetcode;
+package com.fang.leetcode.tag.array;
 
 import com.fang.leetcode.tag.array.ArrayRemoveDuplicates;
 import org.junit.Assert;
