@@ -1,5 +1,9 @@
 package com.fang.leetcode.tag.array;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
 /**
  * description
  *给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。
@@ -20,21 +24,22 @@ public class ArrayRemoveDuplicates {
 
     /**
      * 考察点：数组索引的使用
-     * 关键点：注意到排序后的数组，索引和索引对应的值直接的关系，以及触发更新索引值的条件
+     * 关键点：双指针法，慢指针表示新的数组索引，块指针表示旧的指针索引；
      *
      *
      * @param nums
      * @return
      */
-    public static int[] removeDuplicates(int[] nums){
+    public static int removeDuplicates(int[] nums){
+        int sortedArrayIndex = 0;
         for(int index = 1; index < nums.length ;index ++){
-            int currentNum = nums[index];
-            int lastNum = nums[index-1];
-            if(currentNum != lastNum){
-                nums[currentNum-1] = currentNum;
+            if(nums[sortedArrayIndex] != nums[index]){
+                sortedArrayIndex++;
+                nums[sortedArrayIndex] = nums[index];
             }
         }
-        return nums;
+        System.out.println(Arrays.stream(nums).boxed().collect(Collectors.toList()).toString());
+        return sortedArrayIndex +1;
     }
 
 }

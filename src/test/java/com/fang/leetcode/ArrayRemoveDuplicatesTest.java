@@ -16,9 +16,14 @@ public class ArrayRemoveDuplicatesTest {
     public void removeDuplicates() {
         int[] testNums = {1,2,3,4};
         int[] testNums1 = {1,1,2,2,2,3,4};
-        int[] assertNums1 = {1,2,3,4,2,3,4};
-        Assert.assertArrayEquals(ArrayRemoveDuplicates.removeDuplicates(testNums),testNums);
-        Assert.assertArrayEquals(ArrayRemoveDuplicates.removeDuplicates(testNums1),assertNums1);
+        int[] testNums2 = {-1,0,0,0,0,3,3};
+        int[] testNums3 = {-3,-1};
+        int[] testNums4 = {1,1,2};
+        Assert.assertEquals(ArrayRemoveDuplicates.removeDuplicates(testNums),4);
+        Assert.assertEquals(ArrayRemoveDuplicates.removeDuplicates(testNums1),4);
+        Assert.assertEquals(ArrayRemoveDuplicates.removeDuplicates(testNums2),3);
+        Assert.assertEquals(ArrayRemoveDuplicates.removeDuplicates(testNums3),2);
+        Assert.assertEquals(ArrayRemoveDuplicates.removeDuplicates(testNums4),2);
     }
 
 }
