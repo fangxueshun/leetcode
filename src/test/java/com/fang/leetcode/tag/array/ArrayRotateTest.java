@@ -24,5 +24,7 @@ public class ArrayRotateTest {
         ArrayRotate.rotate(test2,k2);
         assertArrayEquals(testExpectResult,test);
         assertArrayEquals(testExpectResult2,test2);
+        assertArrayEquals(ArrayRotate.rotate(new int[] {1,2},3),new int[] {2,1});
+        assertArrayEquals(ArrayRotate.rotate(new int[] {1,2,3,4,5,6,7},3),new int[] {5,6,7,1,2,3,4});
     }
 }
