@@ -20,7 +20,7 @@ package com.fang.leetcode.tag.array;
 public class ArrayPlusOne {
 
     /**
-     * 从数组末尾开始循环，数值加一，重写该位置数值，如果没有进位，则返回，否则继续循环知道最后一位
+     * 从数组末尾开始循环，数值加一，重写该位置数值，如果没有进位，则返回，否则继续循环直到最后一位
      * 如果最后一位有进位，数组左侧扩充一位，填充1返回
      * @param digits
      * @return
