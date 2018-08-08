@@ -1,9 +1,7 @@
 package com.fang.leetcode.tag.array;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.lang.reflect.Array;
+import java.util.*;
 
 /**
  * description
@@ -18,7 +16,7 @@ import java.util.Set;
  * 输出: true
  *
  *
- *
+ * TODO 更优解待开发
  * @author fangxueshun
  * @date 2018/8/7
  */
@@ -29,7 +27,7 @@ public class ArrayDuplicateVeryfy {
      * @param nums
      * @return
      */
-    public static  boolean containsDuplicate(int[] nums) {
+    public static  boolean containsDuplicateLostSpace(int[] nums) {
         Set<Integer> integerObjectMap = new HashSet<>(nums.length);
         for(int num :nums){
             if(!integerObjectMap.add(num)){
@@ -37,6 +35,23 @@ public class ArrayDuplicateVeryfy {
             }
         }
 
+        return false;
+    }
+
+    /**
+     * 先排序，再判断
+     * @param nums
+     */
+    public static boolean containsDuplicate(int[] nums){
+        if(nums.length<2){
+            return false;
+        }
+        Arrays.sort(nums);
+        for(int i = 0;i<nums.length-1;i++){
+            if(nums[i]==nums[i+1]){
+                return true;
+            }
+        }
         return false;
     }
 
