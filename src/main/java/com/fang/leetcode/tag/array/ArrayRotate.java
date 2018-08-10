@@ -15,16 +15,17 @@ import java.util.stream.Collectors;
  * 向右旋转 1 步: [7,1,2,3,4,5,6]
  * 向右旋转 2 步: [6,7,1,2,3,4,5]
  * 向右旋转 3 步: [5,6,7,1,2,3,4]
- *
- *
- *
+ * <p>
+ * <p>
+ * <p>
  * 共有3种解法
- *
- * 解法1：翻转前n - k元素，翻转剩下的k个元素，最后翻转全部元素 
- *
+ * <p>
+ * 解法1：翻转前n - k元素，翻转剩下的k个元素，最后翻转全部元素
+ * <p>
  * 解法2：每次把最后一个元素移到第一位，后面的元素后移一位，循环往复，直到第k次。
- *
+ * <p>
  * 解法4：交换最后k个元素和最开始的k个元素，在把前面的n-k个元素翻转。
+ *
  * @author fangxueshun
  * @date 2018/8/6
  */
@@ -56,8 +57,31 @@ public class ArrayRotate {
         }
     }
 
+    /**
+     * 时间复杂度和上个算法相同，但是读写数组的次数减少了。
+     * 原理为先将末尾数值存入临时变量，其他数值依次右移
+     * 进行k次循环完成
+     *
+     * @param nums
+     * @param k
+     * @return
+     */
+    public static int[] rotateLostTime2(int[] nums, int k) {
+        if (nums.length < 2) {
+            return nums;
+        }
+        for (int j = 0; j < k; j++) {
+            int temp = nums[nums.length - 1];
+            for (int i = nums.length - 2; i >= 0; i--) {
 
-     /**
+            }
+            nums[0] = temp;
+        }
+
+        return nums;
+    }
+
+    /**
      * 每翻转前n - k元素，翻转剩下的k个元素，最后翻转全部元素，时间复杂度O(n)
      *
      * @param nums
@@ -76,6 +100,7 @@ public class ArrayRotate {
         arrayReverse(nums,0,length-1);
         return nums;
     }
+
 
     /**
      * 数组反转，如[12345]->[54321]
