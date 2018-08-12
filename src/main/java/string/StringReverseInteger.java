@@ -1,5 +1,7 @@
 package string;
 
+import util.EasyArray;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,24 +29,30 @@ import java.util.List;
  * Time: 23:12
  */
 public class StringReverseInteger {
+
+    /**
+
+     * @param x
+     * @return
+     */
     public static int reverse(int x) {
-//        String s= String.valueOf(x)
-        return 0;
+        if(x>-9 && x < 9){
+            return x;
+        }
+        String s= String.valueOf(x);
+        char[] schars = s.toCharArray();
+        if(x >0){
+            EasyArray.reverseCharArray(schars);
+        }else {
+            EasyArray.reverseCharArray(schars,1,schars.length-1);
+        }
+
+        Integer target = Integer.valueOf(new String(schars));
+
+        return target;
     }
 
-    public static void main(String[] args) {
-//        String a="sdddddddssssssssssssssssssssssssssabcasdfasdfasdfddddddd";
-//
-//        String b="sdddddddssssssssssssssssssssssssssabcasdfasdfasdfddddddd";
 
-        Integer a = 12;
-        Integer b = 12;
-        if(a==b){
 
-            System.out.println("a==b");
 
-        }else{
-
-            System.out.println("a!=b");}
-    }
 }
