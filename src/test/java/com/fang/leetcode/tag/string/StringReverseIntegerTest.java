@@ -19,6 +19,7 @@ public class StringReverseIntegerTest {
         Assert.assertEquals(-321,StringReverseInteger.reverse(-123));
         Assert.assertEquals(0,StringReverseInteger.reverse(Integer.MIN_VALUE));
         Assert.assertEquals(0,StringReverseInteger.reverse(Integer.MAX_VALUE));
+        Assert.assertEquals(2147483641,StringReverseInteger.reverse(1463847412));
 
     }
 }
