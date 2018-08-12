@@ -1,4 +1,4 @@
-package util;
+package com.fang.leetcode.tag.util;
 
 /**
  * Author: fangxueshun

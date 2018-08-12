@@ -1,7 +1,7 @@
-package string;
+package com.fang.leetcode.tag.string;
 
 
-import util.EasyArray;
+import com.fang.leetcode.tag.util.EasyArray;
 
 /**
  * Author: fangxueshun
