@@ -30,7 +30,12 @@ import java.util.Arrays;
 public class StringAnagram {
 
     public static void main(String[] args) {
+        String test = "aDc123";
+        test.length();
+        System.out.println(test.toLowerCase());
         System.out.println((int) 'Z');
+        
+        System.out.println(Character.digit('a',10));
     }
 
     /**
