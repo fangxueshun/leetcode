@@ -53,6 +53,16 @@ package com.fang.leetcode.tag.string;
  */
 public class StringAtoi {
 
+    public static void main(String[] args) {
+        for(int i =0;i<100;i++){
+            char c = (char)i;
+            String tet = "1";
+            String test2 = tet+(char)8;
+            System.out.println(test2);
+            System.out.println("整数"+i+"对应的字符串为--->"+c);
+        }
+
+    }
 
     /**
      * 要分析各种条件，尤其是由‘+’ ‘-’ ‘ ’ ‘0’组成的各种组合
