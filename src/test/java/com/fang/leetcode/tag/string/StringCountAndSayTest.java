@@ -13,7 +13,7 @@ public class StringCountAndSayTest {
 
     @Test
     public void countAndSay() {
-        Assert.assertSame("1",StringCountAndSay.countAndSay(1));
+        Assert.assertEquals("1",StringCountAndSay.countAndSay(1));
         Assert.assertEquals("1211",StringCountAndSay.countAndSay(4));
     }
 }
