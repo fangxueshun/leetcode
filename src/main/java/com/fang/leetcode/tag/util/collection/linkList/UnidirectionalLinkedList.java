@@ -42,8 +42,8 @@ public class UnidirectionalLinkedList<E> {
     }
 
     public static class Node<E> {
-        E value;
-        Node<E> nextNode;
+        public E value;
+        public Node<E> nextNode;
 
         private Node(E node, Node<E> nextNode) {
             this.value = node;

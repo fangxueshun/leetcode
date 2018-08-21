@@ -1,9 +1,8 @@
 package com.fang.leetcode.tag.util.collection.linkList;
 
+import com.fang.leetcode.tag.linkedList.LinkedListDeleteNode;
 import org.junit.Assert;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 /**
  * Author: fangxueshun

@@ -1,4 +1,6 @@
-package com.fang.leetcode.tag.util.collection.linkList;
+package com.fang.leetcode.tag.linkedList;
+
+import com.fang.leetcode.tag.util.collection.linkList.UnidirectionalLinkedList;
 
 /**
  * Author: fangxueshun
