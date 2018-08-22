@@ -10,7 +10,12 @@ public class UnidirectionalLinkedList<E> {
     private transient int size = 0;
     private transient Node<E> first;
     private transient Node<E> last;
-
+    public Node<E> first(){
+        return first;
+    }
+    public Node<E> last(){
+        return last;
+    }
     public UnidirectionalLinkedList() {
     }
 
