@@ -66,4 +66,13 @@ public class UnidirectionalLinkedList<E> {
         }
         return stringBuilder.toString();
     }
+    public String toStringFromLastNode() {
+        Node currentNode = last;
+        StringBuilder stringBuilder = new StringBuilder();
+        while (currentNode != null) {
+            stringBuilder.append(currentNode.value + (currentNode.nextNode == null ? "" : "->"));
+            currentNode = currentNode.nextNode;
+        }
+        return stringBuilder.toString();
+    }
 }
