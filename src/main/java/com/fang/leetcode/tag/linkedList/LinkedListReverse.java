@@ -28,6 +28,8 @@ public class LinkedListReverse {
         UnidirectionalLinkedList.Node currentNode = head.first();
         UnidirectionalLinkedList.Node lastNode = null;
         while (currentNode != null) {
+            /** 这里必须这样写，不能写成“final tempNode = currentNode”,后面“currentNode = tempNode.next”,因为final修饰引用时，
+             * 只是指该引用不能变换，但是这里引用对象的内部变量还是可以变化的*/
             final UnidirectionalLinkedList.Node nextNode = currentNode.nextNode;
             currentNode.nextNode = lastNode;
             lastNode = currentNode;
