@@ -85,7 +85,7 @@ public class LinkedListMerge {
      *
      *  // 递归解法
      *  // 递归的核心方法是将问题规模不断缩小化
-     *  // 合并两个长度为n和m的链表，在value(n) < value(m)可以将规模缩减为合并长度为(n-1)和m的链表
+     *  // 合并两个长度为n和m的链表，在value(n) < val(m)可以将规模缩减为合并长度为(n-1)和m的链表
      * public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
      *     if (l1 == null) return l2;
      *     if (l2 == null) return l1;
