@@ -1,7 +1,5 @@
 package com.fang.leetcode.tag.util.tree;
 
-import java.util.Arrays;
-
 /**
  * Author: fangxueshun
  * Description:
@@ -17,11 +15,16 @@ public class TreeNode {
         this.val = val;
     }
 
-    private static String visit(TreeNode treeNode){
+
+    private static String toString(TreeNode treeNode){
         if(null == treeNode){
-            return "";
+            return "null,";
         }
-        return treeNode.val+"";
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(treeNode.val+",");
+        stringBuilder.append(toString(treeNode.left));
+        stringBuilder.append(toString(treeNode.right));
+        return stringBuilder.toString();
     }
 
 
@@ -31,9 +34,13 @@ public class TreeNode {
         treeNode.left = new TreeNode(2);
         treeNode.right = new TreeNode(3);
         treeNode.left.left = new TreeNode(4);
-//        treeNode.right.left = new TreeNode(5);
-//        treeNode.right.right = new TreeNode(6);
-        System.out.println(treeNode.toString());
+        treeNode.right.left = new TreeNode(5);
+        treeNode.right.left.left = new TreeNode(51);
+        treeNode.right.left.right = new TreeNode(52);
+        treeNode.right.right = new TreeNode(6);
+        treeNode.right.right.left = new TreeNode(61);
+        treeNode.right.right.right = new TreeNode(62);
+        System.out.println(toString(treeNode));
     }
 
     public static TreeNode initArray2Tree(String[] array){
