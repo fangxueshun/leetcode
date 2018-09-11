@@ -20,7 +20,7 @@ public class TreeNodeTest {
         treeNode.right = new TreeNode(20);
         treeNode.right.left = new TreeNode(15);
         treeNode.right.right = new TreeNode(17);
-        Assert.assertEquals("[3,9,20,null,null,15,7]",TreeNode.toString(treeNode));
+        Assert.assertEquals("[3,9,20,null,null,15,17]",TreeNode.toString(treeNode));
     }
 
     @Test
