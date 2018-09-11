@@ -58,8 +58,9 @@ public class TreeNode {
         }
 
         stringBuilder.append("]");
+        //去掉最后一层null节点并返回
 
-        return stringBuilder.toString().replace(",null,null,null,null","");
+        return stringBuilder.toString().replaceAll("(,null)+\\]$","]");
     }
 
     /**
