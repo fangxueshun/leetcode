@@ -61,22 +61,6 @@ public class TreeNode {
 
 
 
-    public static void main(String[] args) {
-        TreeNode treeNode = new TreeNode(4);
-        treeNode.left = new TreeNode(2);
-        treeNode.right = new TreeNode(3);
-        treeNode.left.left = new TreeNode(4);
-        treeNode.right.left = new TreeNode(5);
-        treeNode.right.left.left = new TreeNode(51);
-        treeNode.right.left.right = new TreeNode(52);
-        treeNode.right.right = new TreeNode(6);
-        treeNode.right.right.left = new TreeNode(61);
-        treeNode.right.right.right = new TreeNode(62);
-        System.out.println(toString(treeNode));
-        String[] strings = new String[]{"4","2","3","4","null","5","6","null","null","51","52","61","62","null","null","null","null","null","null","null","null"};
-        System.out.println(TreeNode.toString(initArray2Tree(strings)));
-    }
-
 
     public static TreeNode initArray2Tree(String[] array) {
         if (null == array || array.length == 0) {
@@ -120,6 +104,23 @@ public class TreeNode {
         }
         return root;
     }
+
+
+    public static String intArrayToStringArray(String str){
+        List<String> list = new ArrayList<>();
+        str  = str.replace("]","");
+        str  = str.replace("[","");
+        String[] elemens = str.split(",");
+        for(String s :elemens){
+            list.add(s);
+        }
+        return gson.toJson(list);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(intArrayToStringArray("[10,5,15,null,null,6,20]"));
+    }
+
 
 
 }

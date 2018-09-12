@@ -28,18 +28,4 @@ public class TreeNodeTest {
     }
 
 
-    private static String intArrayToStringArray(String str){
-        List<String> list = new ArrayList<>();
-        str  = str.replace("]","");
-        str  = str.replace("[","");
-        String[] elemens = str.split(",");
-        for(String s :elemens){
-            list.add(s);
-        }
-        return gson.toJson(list);
-    }
-
-    public static void main(String[] args) {
-        System.out.println(intArrayToStringArray("[3,9,20,null,null,15,17]"));
-    }
 }
