@@ -105,6 +105,24 @@ public class TreeNode {
         return root;
     }
 
+    /**
+     * 中旭遍历到数组
+     * @return
+     */
+    public   List<Integer> middleOrderTraversal(){
+        if(null == this){
+            return null;
+        }
+        List<Integer> target = new ArrayList<>();
+        if(null != this.left){
+            target.addAll(this.left.middleOrderTraversal());
+        }
+        target.add(this.val);
+        if(null != this.right){
+            target.addAll(this.right.middleOrderTraversal());
+        }
+        return target;
+    }
 
     public static String intArrayToStringArray(String str){
         List<String> list = new ArrayList<>();

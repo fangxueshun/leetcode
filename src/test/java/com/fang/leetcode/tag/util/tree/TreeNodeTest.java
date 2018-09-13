@@ -4,11 +4,6 @@ import com.google.gson.Gson;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import static org.junit.Assert.*;
-
 /**
  * Author: fangxueshun
  * Description:
@@ -25,6 +20,7 @@ public class TreeNodeTest {
         treeNode.right.left = new TreeNode(15);
         treeNode.right.right = new TreeNode(17);
         Assert.assertEquals("[\"3\",\"9\",\"20\",\"null\",\"null\",\"15\",\"17\"]",TreeNode.toString(treeNode));
+        Assert.assertEquals("[9,3,15,20,17]",gson.toJson(treeNode.middleOrderTraversal()));
     }
 
 

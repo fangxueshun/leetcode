@@ -83,11 +83,11 @@ public class ValidBST {
      * @param root
      * @return
      */
-    public boolean isValidBSTByRecursive(TreeNode root) {
+    public static boolean isValidBSTByRecursive(TreeNode root) {
         if (root == null) return true;
         return valid(root, Long.MIN_VALUE, Long.MAX_VALUE);
     }
-    public boolean valid(TreeNode root, long low, long high) {
+    public static boolean valid(TreeNode root, long low, long high) {
         if (root == null) {
             return true;
         }
