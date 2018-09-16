@@ -136,7 +136,7 @@ public class TreeNode {
     }
 
     public static void main(String[] args) {
-        System.out.println(intArrayToStringArray("[10,5,15,null,null,6,20]"));
+        System.out.println(intArrayToStringArray("[0,-3,9,-10,null,5]"));
     }
 
 
