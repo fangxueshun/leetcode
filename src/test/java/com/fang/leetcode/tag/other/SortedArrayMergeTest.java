@@ -14,10 +14,18 @@ import static org.junit.Assert.*;
 public class SortedArrayMergeTest {
 
     @Test
-    public void merge() {
+    public void mergeTest() {
         int[] target = new int[]{1,2,3,0,0,0};
         int[] enums = new int[]{2,5,6};
         SortedArrayMerge.merge(target,3,enums,3);
+        Assert.assertArrayEquals(new int[]{1,2,2,3,5,6},target);
+    }
+
+    @Test
+    public void mergeByOneLoopTest() {
+        int[] target = new int[]{1,2,3,0,0,0};
+        int[] enums = new int[]{2,5,6};
+        SortedArrayMerge.mergeByOneLoop(target,3,enums,3);
         Assert.assertArrayEquals(new int[]{1,2,2,3,5,6},target);
     }
 }

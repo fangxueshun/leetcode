@@ -1,5 +1,7 @@
 package com.fang.leetcode.tag.other;
 
+import java.util.Arrays;
+
 /**
  * description
  * <p>
@@ -23,11 +25,52 @@ package com.fang.leetcode.tag.other;
  */
 public class SortedArrayMerge {
 
+    /**
+     * 两个数组合并，调用双轴快排，效率比较低
+     *
+     * @param nums1
+     * @param m
+     * @param nums2
+     * @param n
+     */
     public static void merge(int[] nums1, int m, int[] nums2, int n) {
         if (nums1.length == 0 || nums2.length == 0) {
             return;
         }
+        for (int i = 0; i < n; i++) {
+            nums1[m + i] = nums2[i];
+        }
+
+        Arrays.sort(nums1);
 
 
+    }
+
+    /**
+     *
+     * 时间复杂度0n的解法
+     * @param nums1
+     * @param m
+     * @param nums2
+     * @param n
+     */
+    public static void mergeByOneLoop(int[] nums1, int m, int[] nums2, int n) {
+        int tailIndex = m + n - 1;
+        while (m > 0 && n > 0) {
+            if (nums1[m - 1] > nums2[n - 1]) {
+                nums1[tailIndex] = nums1[m - 1];
+                m--;
+            } else {
+                nums1[tailIndex] = nums2[n - 1];
+                n--;
+
+            }
+            tailIndex--;
+        }
+        while (n>0){
+            nums1[tailIndex] = nums2[n - 1];
+            tailIndex--;
+            n--;
+        }
     }
 }
