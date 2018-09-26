@@ -1,5 +1,9 @@
 package com.fang.leetcode.tag.other;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 /**
  * Author: fangxueshun
  * Description:
@@ -50,5 +54,27 @@ public class Rob {
             currentMax = Math.max(temp,lastMax);
         }
         return currentMax;
+    }
+
+    public static void main(String[] args) {
+
+        int [] test = new int[]{1,2,3};
+        List list = Arrays.asList(test);
+        Collections.shuffle(list);
+        int[] temp = Arrays.copyOf(test,test.length);
+        test = temp;
+        System.out.println(array2String(test));
+        System.out.println("temp->"+array2String(temp));
+        test[1]=4;
+        System.out.println("temp->"+array2String(temp));
+    }
+
+    private static String array2String(int[] nums){
+        StringBuilder stringBuilder = new StringBuilder();
+        for(int num : nums){
+            stringBuilder.append(num+",");
+        }
+        return stringBuilder.toString();
+
     }
 }
